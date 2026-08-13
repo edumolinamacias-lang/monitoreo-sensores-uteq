@@ -1,12 +1,19 @@
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Dashboard from "./pages/Dashboard";
+import Ubicaciones from "./pages/Ubicaciones";
+import "./styles.css";
 
-import './App.css'
-
-function App() {
+export default function App() {
   return (
-    <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-      <h1>Hola</h1>
-    </div>
-  )
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Navigate to="/sensor/sensor_001" replace />} />
+        <Route path="/sensor/:sensorId" element={<Dashboard />} />
+        <Route path="/ubicaciones" element={<Ubicaciones />} />
+        <Route path="*" element={<Navigate to="/ubicaciones" replace />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
