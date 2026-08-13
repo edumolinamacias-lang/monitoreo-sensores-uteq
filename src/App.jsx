@@ -6,7 +6,7 @@ import "./styles.css";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/monitoreo-sensores-uteq">
       <Navbar />
       <Routes>
         <Route path="/" element={<Navigate to="/sensor/sensor_1206787630" replace />} />
