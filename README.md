@@ -1,6 +1,5 @@
 
 
-![alt text](image.png)
 
 # 📊 Monitoreo de Sensores UTEQ
 
